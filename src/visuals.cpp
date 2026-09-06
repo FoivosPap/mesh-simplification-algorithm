@@ -42,17 +42,17 @@ static float toldz2 = 0.0;
 float rot = 0.0;
 static float rot1 = 0.0;
 static float rot2 = 0.0;
-int rotx = 0.0;
-int roty = 0.0;
-int rotx1 = 0.0;
-int roty1 = 0.0;
-int rotx2 = 0.0;
-int roty2 = 0.0;
+float rotx = 0.0;
+float roty = 0.0;
+float rotx1 = 0.0;
+float roty1 = 0.0;
+float rotx2 = 0.0;
+float roty2 = 0.0;
 
-int rotx11 = 0.0;
-int roty11 = 0.0;
-int rotx22 = 0.0;
-int roty22 = 0.0;
+float rotx11 = 0.0;
+float roty11 = 0.0;
+float rotx22 = 0.0;
+float roty22 = 0.0;
 
 int rotoldx1=0;
 int rotoldy1=0;
@@ -386,7 +386,7 @@ void getFaceNormal(float *norm,float pointa[3],float pointb[3],float pointc[3])
 
 //-----------------------------------------------------------
 
-void Import_Objects(char *FileName1,char *FileName2)
+void Import_Objects(const char *FileName1,const char *FileName2)
 {
 	
 	int k=0;
