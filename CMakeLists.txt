@@ -14,6 +14,10 @@ find_package(OpenGL REQUIRED)
 # Include the directories for GLUT and OpenGL headers
 include_directories(${GLUT_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} gl/ src/)
 
+# Automatically copy the 3D models to the build directory upon configuration
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/Model_1.obj" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/Model_2.obj" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+
 # Define your executable and its source files
 add_executable(app 
     src/main.cpp 

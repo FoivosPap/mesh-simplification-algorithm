@@ -6,7 +6,13 @@
 #include <sstream>
 
 #include <time.h>
-#include "gl/glut.h"   // - An interface and windows 
+// #include "gl/glut.h"   // - An interface and windows 
+
+#ifdef __APPLE__
+  #include <GLUT/glut.h> // Use macOS native GLUT framework
+#else
+  #include "gl/glut.h"   // Fallback for Windows/Linux
+#endif
 
 #include <random>
 
