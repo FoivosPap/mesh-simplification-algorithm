@@ -1,8 +1,16 @@
 
 
 #include <stdio.h>     // - Just for some ASCII messages
-#include "gl/glut.h"   // - An interface and windows 
+// #include "gl/glut.h"   // - An interface and windows 
                        //   management library
+#include <iostream> // Just for some ASCII messages
+
+#ifdef __APPLE__
+  #include <GLUT/glut.h> // Use native Apple GLUT
+#else
+  #include "gl/glut.h"   // Fallback to local header for Windows/Linux
+#endif
+
 #include "visuals.h"   // Header file for our OpenGL functions
 
 
