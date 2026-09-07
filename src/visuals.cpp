@@ -6,13 +6,13 @@
 #include <sstream>
 
 #include <time.h>
-// #include "gl/glut.h"   // - An interface and windows 
+#include "gl/glut.h"   // - An interface and windows 
 
-#ifdef __APPLE__
-  #include <GLUT/glut.h> // Use macOS native GLUT framework
-#else
-  #include "gl/glut.h"   // Fallback for Windows/Linux
-#endif
+// #ifdef __APPLE__
+//   #include <GLUT/glut.h> // Use macOS native GLUT framework
+// #else
+//   #include "gl/glut.h"   // Fallback for Windows/Linux
+// #endif
 
 #include <random>
 
@@ -1426,8 +1426,8 @@ void Render()
 			l2za3=Hierarchy_Levelz(l2,l2ya2,X2,Y2,Z2,f21y2max,f22y2max,f23y2max,xmax2-((xmax2-xmin2)/2),ymax2,zmax2,xmin2,((ymax2-ymin2)/2)+ymin2,zmin2,f21z3max,f22z3max,f23z3max,f21z3min,f22z3min,f23z3min);
 			l2zb3=Hierarchy_Levelz(l2,l2ya2,X2,Y2,Z2,f21y2max,f22y2max,f23y2max,xmax2-((xmax2-xmin2)/2),ymax2,zmax2,xmin2,((ymax2-ymin2)/2)+ymin2,zmin2,f21z3max,f22z3max,f23z3max,f21z3min,f22z3min,f23z3min);
 			tiz=0;
-			l2za4=Hierarchy_Levelz(l2yb2,l22,X2,Y2,Z2,f21y2min,f22y2min,f23y2min,xmax2-((xmax2-xmin2)/2),ymax2-((ymax2-ymin2)/2),zmax2,xmin2,ymin2,zmin2,f21z4max,f22z4max,f23z4max,f21z4min,f22z4min,f23z4min);
-			l2zb4=Hierarchy_Levelz(l2yb2,l22,X2,Y2,Z2,f21y2min,f22y2min,f23y2min,xmax2-((xmax2-xmin2)/2),ymax2-((ymax2-ymin2)/2),zmax2,xmin2,ymin2,zmin2,f21z4max,f22z4max,f23z4max,f21z4min,f22z4min,f23z4min);
+			l2za4=Hierarchy_Levelz(l2,l22,X2,Y2,Z2,f21y2min,f22y2min,f23y2min,xmax2-((xmax2-xmin2)/2),ymax2-((ymax2-ymin2)/2),zmax2,xmin2,ymin2,zmin2,f21z4max,f22z4max,f23z4max,f21z4min,f22z4min,f23z4min);
+			l2zb4=Hierarchy_Levelz(l2,l22,X2,Y2,Z2,f21y2min,f22y2min,f23y2min,xmax2-((xmax2-xmin2)/2),ymax2-((ymax2-ymin2)/2),zmax2,xmin2,ymin2,zmin2,f21z4max,f22z4max,f23z4max,f21z4min,f22z4min,f23z4min);
 			tiz=0;
 		}
 		if (hier==3) 
